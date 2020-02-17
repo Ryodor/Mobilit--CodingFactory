@@ -1,5 +1,20 @@
 - Lundi 
     Matin : Créer un réseau de capteur Zigbee
-    configuration : PAN ID et le coordinateur
-    John notification sera intéressant dans le projet
+    configuration : PAN ID, coordinateur, PIN, frequence sample
+    Attention : John notification sera intéressant dans le projet
     adresse mac  = unique 
+    SleepMode : obligatoire à gérer
+    nodej : gestion des sample ? 
+    Important : coordinateur à mettre en mode API 
+    Sur le coordinateur, branché le "serial connection with the radio module"
+
+Lorsque tu entre une touche dans le log du coordinateur, deux led s'allume (reception et transmission).
+
+    Aprem : Requete IOSample / IODataSample / RemoteATCommand
+    routeur envoie alumme lampe
+    coordinateur alume la lampe
+    Choix du projet : 8 buzzers, 4 par joueurs. Le premier joueur appuie sur l'un de ses buzzer, 
+                      son adverssaire doit appuyer sur le même buzzer de son côté puis appuyer à 
+                      nouveau sur un buzzer de son choix. Le premier joueur doit appuyer sur les 
+                      deux buzzer dans l'ordre et ainsi de suite jusqu'à ce que l'un des deux 
+                      joueurs se trompe. 
