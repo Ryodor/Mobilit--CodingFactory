@@ -18,3 +18,8 @@ Lorsque tu entre une touche dans le log du coordinateur, deux led s'allume (rece
                       nouveau sur un buzzer de son choix. Le premier joueur doit appuyer sur les 
                       deux buzzer dans l'ordre et ainsi de suite jusqu'à ce que l'un des deux 
                       joueurs se trompe. 
+
+
+- Mardi, initiation au node orienté Zigbee
+    - si sleepmode alors c'est un end device, sinon c'est un routeur
+    - coordinateur a la clé de securité en plus d'être en charge de la coordination
