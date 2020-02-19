@@ -8,7 +8,7 @@ var xbeeAPI = new xbee_api.XBeeAPI({
 });
 
 
-let serialport = new SerialPort("/dev/ttyUSB1", {
+let serialport = new SerialPort("/dev/tty.SLAB_USBtoUART", {
   baudRate: 9600,
 }, function (err) {
   if (err) {
@@ -22,8 +22,8 @@ xbeeAPI.builder.pipe(serialport);
 serialport.on("open", function () {
   var frame_obj = { // AT Request to be sent
     type: C.FRAME_TYPE.AT_COMMAND,
-    command: "NI",
-    commandParameter: [],
+    command: "D0",
+    commandParameter: [5],
   };
 
   xbeeAPI.builder.write(frame_obj);
@@ -63,11 +63,11 @@ xbeeAPI.parser.on("data", function (frame) {
 
 
   } else if (C.FRAME_TYPE.ZIGBEE_IO_DATA_SAMPLE_RX === frame.type) {
-
+    console.log("Zibgee IO DATA: " + frame.data);
 
 
   } else if (C.FRAME_TYPE.REMOTE_COMMAND_RESPONSE === frame.type) {
-    
+    console.log("Remote command response:" + frame.data);
   } else {
     console.debug(frame);
     let dataReceived = String.fromCharCode.apply(null, frame.commandData)
