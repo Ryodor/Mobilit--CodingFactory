@@ -1,0 +1,104 @@
+html{
+    background-color: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    float: right;
+  }
+  
+  .box select {
+    background-color: #0563af;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .box::before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .box select option {
+    padding: 30px;
+  }
+
+  select{
+      margin-left: 40px;
+  }
+
+
+
+
+.circle.small {
+	border: 8px solid #f84342;
+	border-radius: 50%;
+	width: 220px;
+	height: 220px;
+    z-index: 86;
+    margin-left: 43%;
+    margin-top: 30%;
+}
+
+.circle.filled {
+	background-color: #666666;
+}
+
+.circle h3 {
+    margin-top: 25px;
+    text-align: center;
+    font-family:  Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #f84342;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    display: block;
+}
+
+.circle h2 {
+    text-align: center;
+    font-family: 'Sarpanch', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: #222222;
+    text-decoration: none;
+    display: block;
+    letter-spacing: -0.02em;
+    word-spacing: -0.02em;
+    line-height: 1;
+    vertical-align: middle;
+    margin-top: 40px;
+    transform: skew(-12deg) rotate(-12deg);
+    text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33; 
+}

@@ -20,11 +20,11 @@ serialport.pipe(xbeeAPI.parser);
 xbeeAPI.builder.pipe(serialport);
 
 serialport.on("open", function () {
-  var frame_obj = { // AT Request to be sent
+ /* var frame_obj = { // AT Request to be sent
     type: C.FRAME_TYPE.AT_COMMAND,
     command: "D0",
     commandParameter: [5],
-  };
+  };*/
 
   xbeeAPI.builder.write(frame_obj);
 
